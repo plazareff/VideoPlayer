@@ -6,9 +6,9 @@ This is a fork of the video player found here:  https://github.com/yundiantech/V
 This fork has been updated to support Dolby AC-4 audio streams by compiling it against an experimental version of ffmpeg that supports Dolby AC-4 audio.
 You can find the experimental verion of ffmpeg here:  https://github.com/richardpl/FFmpeg/tree/ac4
 
-This fork was created for people who are early adopters of the new North American ATSC3.0 broadcasting standard.  Most major US cities have conducted a rollout of this new boradcasting standard that supports 4K HEVC, over-the-air (OTA) television broadcast streams.
+This fork was created for people who are early adopters of the new North American ATSC3.0 broadcasting standard.  Most major US cities have conducted a rollout of this new boradcasting standard that supports 4K HEVC/AC-4, over-the-air (OTA) television broadcast streams.
 
-For owners of SiliconDust HDHomeRun 4K tuners, vieweing an ATSC3.0 video stream is as easy as entering the URL for a particular channel as found in your tuner's channel lineup.  I.e. http://x.x.x.x:5004/auto/vyyy.y  Replace the X's with the IP address of your tuner and replace the Y's with the channel number you want to watch.  Allow 10 to 15 seconds of buffering before the video/audio appears.
+For owners of SiliconDust HDHomeRun 4K tuners, vieweing an ATSC3.0/AC-4 encoded video stream is as easy as entering the URL for a particular channel as found in your tuner's channel lineup.  I.e. http://x.x.x.x:5004/auto/vyyy.y  Replace the X's with the IP address of your tuner and replace the Y's with the channel number you want to watch.  Allow 10 to 15 seconds of buffering before the video/audio appears.
 
 This player also supports playback from local files and from rtsp:// camera streams.  For password protected camera streams use this URL as a template for connectiog to your camera: rtsp://admin:password@x.x.x.x:554/path-of-your-stream
 For cameras not using authentication use the following template: rtsp://x.x.x.x:554/path-of-your-stream
