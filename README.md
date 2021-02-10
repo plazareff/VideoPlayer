@@ -1,5 +1,5 @@
 # VideoPlayer
-# Qt+ffmpeg+Dolby+AC-4+AC4+HEVC+ATSC3.0+4K+video 
+# Qt+ffmpeg+SDL2+Dolby+AC-4+AC4+HEVC+ATSC3.0+4K+video 
 
 This is a fork of the video player found here:  https://github.com/yundiantech/VideoPlayer
 
@@ -24,7 +24,7 @@ Build steps for 64-bit Windows:
 
 
 Build steps for Linux or MacOS
-1. Download, build, and install ffmpeg from the experimantal branch I mentioned above
+1. Download, build, and install ffmpeg from the experimantal branch I mentioned above as well as SDL2
 2. Run qmake
 3. Run the make command
 4. Run the linuxdeployqt or macdeployqt command depending on your platform
