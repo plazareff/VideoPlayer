@@ -19,8 +19,8 @@ Build steps for 64-bit Windows:
 1. Open a Visual Studio x64 command prompt and run: qmake
 2. Next, run nmake
 3. After a successful build, copy the ffmpeg DLL files into bin64 folder.
-4. Run the windeployqt command to ensure that all the QT DLL's and support files are included in the Release directory
-5. The resulting videoplayer.exe can be run for this directory or bundled with an installer
+4. Run the windeployqt command to ensure that all the QT DLL's and support files are included in the bin64 directory
+5. The resulting videoplayer.exe can be run for this directory or bundled by an installer
 
 
 Build steps for Linux or MacOS
