@@ -185,7 +185,7 @@ int VideoPlayer::openSDL()
     //int wanted_nb_channels = 2;
    // int samplerate = 44100;
     #define SDL_AUDIO_MIN_BUFFER_SIZE 1024
-    #define SDL_AUDIO_MAX_CALLBACKS_PER_SEC 30
+    #define SDL_AUDIO_MAX_CALLBACKS_PER_SEC 60
 
     //wanted_spec.freq = samplerate;
     //wanted_spec.freq = aCodecCtx->sample_rate;
