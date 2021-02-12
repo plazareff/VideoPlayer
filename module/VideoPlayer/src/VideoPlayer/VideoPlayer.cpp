@@ -10,6 +10,8 @@
 
 #include <stdio.h>
 
+
+
 VideoPlayer::VideoPlayer()
 {
     mConditon_Video = new Cond;
@@ -176,7 +178,7 @@ int VideoPlayer::openSDL()
 
 
 
-	 int wanted_nb_channels = 4;
+	 int wanted_nb_channels = 2;
     ///打开SDL，并设置播放的格式为:AUDIO_S16LSB 双声道，44100hz
     ///后期使用ffmpeg解码完音频后，需要重采样成和这个一样的格式，否则播放会有杂音
     SDL_AudioSpec wanted_spec, spec;
@@ -186,9 +188,10 @@ int VideoPlayer::openSDL()
     #define SDL_AUDIO_MAX_CALLBACKS_PER_SEC 30
 
     //wanted_spec.freq = samplerate;
-    wanted_spec.freq = aCodecCtx->sample_rate;
-    //wanted_spec.samples = FFMAX(SDL_AUDIO_MIN_BUFFER_SIZE, 2 << av_log2(wanted_spec.freq / SDL_AUDIO_MAX_CALLBACKS_PER_SEC));
-    wanted_spec.samples = SDL_AUDIO_BUFFER_SIZE;  // 自定义SDL缓冲区大小
+    //wanted_spec.freq = aCodecCtx->sample_rate;
+    wanted_spec.freq = 46050;
+    wanted_spec.samples = FFMAX(SDL_AUDIO_MIN_BUFFER_SIZE, 2 << av_log2(wanted_spec.freq / SDL_AUDIO_MAX_CALLBACKS_PER_SEC));
+    //wanted_spec.samples = SDL_AUDIO_BUFFER_SIZE;  // 自定义SDL缓冲区大小
     wanted_spec.format = AUDIO_S16SYS; // 具体含义请查看“SDL宏定义”部分
     wanted_spec.silence = 0;            // 0指示静音
     wanted_spec.callback = sdlAudioCallBackFunc;  // 回调函数
@@ -387,8 +390,8 @@ void VideoPlayer::readVideoFile()
             in_ch_layout = aCodecCtx->channel_layout;
 
             //输出的采样率
-            //out_sample_rate = 48000;
-            out_sample_rate = aCodecCtx->sample_rate;
+            out_sample_rate = 48000;
+            //out_sample_rate = aCodecCtx->sample_rate;
             
             //输出的声道布局
 
